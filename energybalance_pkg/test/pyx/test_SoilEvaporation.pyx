@@ -1,13 +1,13 @@
 #'Test generation'
 
-from SoilEvaporation import *
+from soilevaporation import *
 from math import *
 import numpy 
 
 
 
 def test_test1():
-    params= SoilEvaporation(
+    params= soilevaporation(
     diffusionLimitedEvaporation = 6605.505,
     energyLimitedEvaporation = 448.240,
      )

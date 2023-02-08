@@ -2,9 +2,9 @@ import numpy
 from math import *
 from datetime import datetime
 
-def model_RegisterZadok(float cumulTT=354.582294512,
+def model_registerzadok(float cumulTT=354.582294511779,
                         float phase=2.0,
-                        float leafNumber=4.88542196611,
+                        float leafNumber=4.8854219661087575,
                         list calendarMoments=['Sowing'],
                         list calendarDates=[datetime(2007, 3, 21) ,],
                         list calendarCumuls=[0.0],
@@ -13,20 +13,23 @@ def model_RegisterZadok(float cumulTT=354.582294512,
                         float der=300.0,
                         float slopeTSFLN=0.9,
                         float intTSFLN=0.9,
-                        float finalLeafNumber=8.7975820132,
+                        float finalLeafNumber=8.797582013199484,
                         str currentZadokStage='MainShootPlus1Tiller',
                         int hasZadokStageChanged_t1=0,
                         datetime sowingDate=datetime(2007, 3, 21) ):
     """
 
     RegisterZadok Model
-    Author: Pierre MARTRE
-    Reference: Modeling development phase in the 
-                Wheat Simulation Model SiriusQuality.
-                See documentation at http://www1.clermont.inra.fr/siriusquality/?page_id=427
-    Institution: INRA/LEPSE Montpellier
-    Abstract: Record the zadok stage in the calendar
+    Author: Peter D. Jamieson, Glen S. Francis, Derick R. Wilson, Robert J. Martin
+    Reference: https://doi.org/10.1016/0168-1923(94)02214-5
+    Institution: New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.
+        
+    ExtendedDescription: Record the zadok stage in the calendar
     	
+    ShortDescription: Record the zadok stage in the calendar
 
     """
     cdef int hasZadokStageChanged

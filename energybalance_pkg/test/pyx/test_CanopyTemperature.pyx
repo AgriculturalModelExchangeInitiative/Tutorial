@@ -1,16 +1,16 @@
 #'Test generation'
 
-from CanopyTemperature import *
+from canopytemperature import *
 from math import *
 import numpy 
 
 
 
 def test_test1():
-    params= CanopyTemperature(
-    maxTair = 7.2,
-    minTair = 0.7,
+    params= canopytemperature(
     rhoDensityAir = 1.225,
+    minTair = 0.7,
+    maxTair = 7.2,
      )
     minCanopyTemperature_estimated = round(params[0], 3)
     minCanopyTemperature_computed = 2.184

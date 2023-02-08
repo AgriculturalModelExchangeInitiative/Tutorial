@@ -10,4 +10,4 @@ else:
         if (tmax  <= 0.0):
             tmaxrec=tmaxseuil-(1-(Sdepth_cm/prof))*(-tmax)
         else:
-            tmaxrec=0.0*u.degC
+            tmaxrec=0.0

@@ -1,18 +1,18 @@
 #'Test generation'
 
-from UpdateLeafFlag import *
+from updateleafflag import *
 from math import *
 import numpy 
 
 
 
 def test_test_wheat1():
-    params= UpdateLeafFlag(
-    phase = 3,
+    params= updateleafflag(
     hasFlagLeafLiguleAppeared_t1 = 0,
+    phase = 3,
+    calendarMoments = ["Sowing", "Emergence", "EndVernalisation", "MainShootPlus1Tiller", "FloralInitiation", "MainShootPlus2Tiller", "TerminalSpikelet", "PseudoStemErection", "MainShootPlus3Tiller", "1stNodeDetectable", "2ndNodeDetectable", "FlagLeafJustVisible"],
     calendarDates = ["2007/3/21", "2007/3/27", "2007/3/30", "2007/4/5", "2007/4/9", "2007/4/10", "2007/4/11", "2007/4/12", "2007/4/14", "2007/4/15", "2007/4/19", "2007/4/24"],
     calendarCumuls = [0.0, 112.330110409888, 157.969706915664, 280.570678654207, 354.582294511779, 378.453152853726, 402.042720581446, 424.98704708663, 467.23305195298, 487.544313430698, 560.665248444002, 646.389617338974],
-    calendarMoments = ["Sowing", "Emergence", "EndVernalisation", "MainShootPlus1Tiller", "FloralInitiation", "MainShootPlus2Tiller", "TerminalSpikelet", "PseudoStemErection", "MainShootPlus3Tiller", "1stNodeDetectable", "2ndNodeDetectable", "FlagLeafJustVisible"],
      )
     hasFlagLeafLiguleAppeared_estimated = params[0]
     hasFlagLeafLiguleAppeared_computed = 1

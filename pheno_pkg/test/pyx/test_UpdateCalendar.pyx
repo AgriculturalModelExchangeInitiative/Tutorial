@@ -1,18 +1,18 @@
 #'Test generation'
 
-from UpdateCalendar import *
+from updatecalendar import *
 from math import *
 import numpy 
 
 
 
 def test_test_wheat1():
-    params= UpdateCalendar(
-    phase = 1,
+    params= updatecalendar(
     cumulTT =  112.330110409888,
+    calendarMoments = ["Sowing"],
     calendarDates = ["2007/3/21"],
     calendarCumuls = [0.0],
-    calendarMoments = ["Sowing"],
+    phase = 1,
      )
     calendarMoments_estimated = params[0]
     calendarMoments_computed = ["Sowing", "Emergence"]

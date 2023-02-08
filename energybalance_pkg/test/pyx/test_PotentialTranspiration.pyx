@@ -1,13 +1,13 @@
 #'Test generation'
 
-from PotentialTranspiration import *
+from potentialtranspiration import *
 from math import *
 import numpy 
 
 
 
 def test_test1():
-    params= PotentialTranspiration(
+    params= potentialtranspiration(
     tau = 0.9983,
     evapoTranspiration = 830.958,
      )

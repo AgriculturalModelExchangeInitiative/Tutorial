@@ -1,22 +1,22 @@
 #'Test generation'
 
-from Phyllochron import *
+from phyllochron import *
 from math import *
 import numpy 
 
 
 
 def test_test_wheat1():
-    params= Phyllochron(
-    choosePhyllUse = "Default",
+    params= phyllochron(
+    lincr = 8.0,
+    ldecr = 3.0,
+    pdecr = 0.4,
+    pincr = 1.25,
+    ptq = 0.97,
     kl = 0.45,
     p = 120.0,
-    pincr = 1.25,
-    ldecr = 3.0,
+    choosePhyllUse = "Default",
     fixPhyll = 91.2,
-    pdecr = 0.4,
-    ptq = 0.97,
-    lincr = 8.0,
      )
     phyllochron_estimated = round(params, 2)
     phyllochron_computed = 36.48

@@ -2,11 +2,26 @@
 <!DOCTYPE ModelUnit PUBLIC " " "https://raw.githubusercontent.com/AgriculturalModelExchangeInitiative/crop2ml/master/ModelUnit.dtd">
 <ModelUnit modelid="STICS.Snow.SnowWet" name="SnowWet" timestep="1" version="1.0">
 	<Description>
-		<Title>water in liquid state in the snow cover calculation</Title>
-		<Authors>STICS</Authors>
-		<Institution>INRA</Institution>
-		<Reference>-</Reference>
-		<Abstract>-</Abstract>
+		<Title>The Snow wet Model</Title>
+		<Authors>Guillaume Jégo,
+            Martin Chantigny,
+            Elizabeth Pattey,
+            Gilles Bélanger,
+            Philippe Rochette,
+            Anne Vanasse,
+            Claudia Goyer
+		</Authors>
+		<Institution>Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				CanadaLaval University,
+				Agriculture and Agri-Food Canada
+		</Institution>
+		<Reference>doi:http://dx.doi.org/10.1016/j.agrformet.2014.05.002</Reference>
+		<ExtendedDescription>It estimates the water in liquid state in the snow cover</ExtendedDescription>
+		<ShortDescription>It estimates the water in liquid state in the snow cover</ShortDescription>
 	</Description>
 	<Inputs>
 		<Input name="Swet_t1" description="water in liquid state in the snow cover in previous day" inputtype="variable" variablecategory="state" datatype="DOUBLE" default="0.0" min="0.0" max="100.0" unit="mmW" uri=""/>

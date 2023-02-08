@@ -2,11 +2,26 @@
 <!DOCTYPE ModelUnit PUBLIC " " "https://raw.githubusercontent.com/AgriculturalModelExchangeInitiative/crop2ml/master/ModelUnit.dtd">
 <ModelUnit modelid="STICS.Snow.Tavg" name="Tavg" timestep="1" version="1.0">
 	<Description>
-		<Title>Mean temperature  calculation</Title>
-		<Authors>STICS</Authors>
-		<Institution>INRA</Institution>
-		<Reference>-</Reference>
-		<Abstract>-</Abstract>
+		<Title>Mean temperature calculation</Title>
+		<Authors>Guillaume Jégo,
+            Martin Chantigny,
+            Elizabeth Pattey,
+            Gilles Bélanger,
+            Philippe Rochette,
+            Anne Vanasse,
+            Claudia Goyer
+		</Authors>
+		<Institution>Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				CanadaLaval University,
+				Agriculture and Agri-Food Canada
+		</Institution>
+		<Reference>doi:http://dx.doi.org/10.1016/j.agrformet.2014.05.002</Reference>
+		<ExtendedDescription>Calculate the daily mean temperature</ExtendedDescription>
+		<ShortDescription>Calculate the daily mean temperature</ShortDescription>
 	</Description>
 	<Inputs>
 		<Input name="tmin" description="current minimum air temperature" inputtype="variable" variablecategory="auxiliary" datatype="DOUBLE" default="0.0" min="0.0" max="500.0" unit="degC" uri=""/>

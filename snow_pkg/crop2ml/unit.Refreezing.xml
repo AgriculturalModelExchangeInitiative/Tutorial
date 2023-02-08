@@ -2,11 +2,26 @@
 <!DOCTYPE ModelUnit PUBLIC " " "https://raw.githubusercontent.com/AgriculturalModelExchangeInitiative/crop2ml/master/ModelUnit.dtd">
 <ModelUnit modelid="STICS.Snow.Refreezing" name="Refreezing" timestep="1" version="1.0">
 	<Description>
-		<Title>snowfall accumulation  calculation</Title>
-		<Authors>STICS</Authors>
-		<Institution>INRA</Institution>
-		<Reference>-</Reference>
-		<Abstract>-</Abstract>
+		<Title>Snowfall refreezing  Model</Title>
+		<Authors>Guillaume Jégo,
+            Martin Chantigny,
+            Elizabeth Pattey,
+            Gilles Bélanger,
+            Philippe Rochette,
+            Anne Vanasse,
+            Claudia Goyer
+		</Authors>
+		<Institution>Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				CanadaLaval University,
+				Agriculture and Agri-Food Canada
+		</Institution>
+		<Reference>doi:http://dx.doi.org/10.1016/j.agrformet.2014.05.002</Reference>
+		<ExtendedDescription>It simulates the snow in the process of refreezing</ExtendedDescription>
+		<ShortDescription>It simulates the snow in the process of refreezing</ShortDescription>
 	</Description>
 	<Inputs>
 		<Input name="tavg" description="average temperature" inputtype="variable" variablecategory="auxiliary" datatype="DOUBLE" default="0.0" min="0.0" max="100.0" unit="degC" uri=""/>

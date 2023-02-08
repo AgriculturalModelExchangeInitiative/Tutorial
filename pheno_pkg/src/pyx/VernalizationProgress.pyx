@@ -2,9 +2,9 @@ import numpy
 from math import *
 from datetime import datetime
 
-def model_VernalizationProgress(float dayLength=12.3037621834,
-                                float deltaTT=20.3429985012,
-                                float cumulTT=112.33011041,
+def model_vernalizationprogress(float dayLength=12.3037621834005,
+                                float deltaTT=20.3429985011972,
+                                float cumulTT=112.330110409888,
                                 float leafNumber_t1=0.0,
                                 list calendarMoments_t1=['Sowing'],
                                 list calendarDates_t1=[datetime(2007, 3, 21) ,],
@@ -18,25 +18,33 @@ def model_VernalizationProgress(float dayLength=12.3037621834,
                                 float maxTvern=23.0,
                                 float pNini=4.0,
                                 float aMXLFNO=24.0,
-                                float vernaprog_t1=0.551725418738,
+                                float vernaprog_t1=0.5517254187376879,
                                 datetime currentdate=datetime(2007, 3, 27) ,
                                 int isVernalizable=1,
                                 float minFinalNumber_t1=5.5):
     """
 
     VernalizationProgress Model
-    Author: Pierre MARTRE
-    Reference: Modeling development phase in the 
-                Wheat Simulation Model SiriusQuality.
-                See documentation at http://www1.clermont.inra.fr/siriusquality/?page_id=427
-    Institution: INRA Montpellier
-    Abstract: Calculate progress (VernaProg) towards vernalization, but there 
+    Author: Peter D. Jamieson, Glen S. Francis, Derick R. Wilson, Robert J. Martin
+    Reference: https://doi.org/10.1016/0168-1923(94)02214-5
+    Institution: New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.
+        
+    ExtendedDescription: Calculate progress (VernaProg) towards vernalization, but there 
         			is no vernalization below minTvern 
         			and above maxTvern . The maximum value of VernaProg is 1.
         			Progress towards full vernalization is a linear function of shoot 
         			temperature (soil temperature until leaf # reach MaxLeafSoil and then
         			 canopy temperature)
     	
+    ShortDescription: Calculate progress (VernaProg) towards vernalization, but there 
+            is no vernalization below minTvern 
+            and above maxTvern . The maximum value of VernaProg is 1.
+            Progress towards full vernalization is a linear function of shoot 
+            temperature (soil temperature until leaf # reach MaxLeafSoil and then
+             canopy temperature)
 
     """
     cdef float vernaprog

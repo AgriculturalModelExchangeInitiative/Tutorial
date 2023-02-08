@@ -1,20 +1,20 @@
 #'Test generation'
 
-from PTQ import *
+from ptq import *
 from math import *
 import numpy 
 
 
 
 def test_test_wheat1():
-    params= PTQ(
+    params= ptq(
     tTWindowForPTQ = 70.0,
-    pAR = 0.0,
-    deltaTT = 21.3,
+    kl = 0.45,
     listTTShootWindowForPTQ_t1 = [0.0],
     listPARTTWindowForPTQ_t1 = [0.0],
     listGAITTWindowForPTQ = [0.0, 5.2],
-    kl = 0.45,
+    pAR = 0.0,
+    deltaTT = 21.3,
      )
     listPARTTWindowForPTQ_estimated = np.around(params[0], 2)
     listPARTTWindowForPTQ_computed = [0.00, 0.0]

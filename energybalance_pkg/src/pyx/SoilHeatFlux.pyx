@@ -1,18 +1,24 @@
 import numpy 
 from math import *
-def model_SoilHeatFlux(float netRadiationEquivalentEvaporation=638.142,
-                       float tau=0.9983,
-                       float soilEvaporation=448.24):
+def model_soilheatflux(float netRadiationEquivalentEvaporation,
+                       float tau,
+                       float soilEvaporation):
     """
 
     SoilHeatFlux Model
-    Author: Pierre Martre
-    Reference: Modelling energy balance in the wheat crop model SiriusQuality2:
-            Evapotranspiration and canopy and soil temperature calculations
-    Institution: INRA/LEPSE Montpellier
-    Abstract: The available energy in the soil 
+    Author: Peter D. Jamieson, Glen S. Francis, Derick R. Wilson, Robert J. Martin
+    Reference:  https://doi.org/10.1016/0168-1923(94)02214-5
+    Institution: New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.
+        
+    ExtendedDescription: The available energy in the soil 
+    ShortDescription: The available energy in the soil
 
     """
     cdef float soilHeatFlux
     soilHeatFlux = tau * netRadiationEquivalentEvaporation - soilEvaporation
     return  soilHeatFlux
+
+

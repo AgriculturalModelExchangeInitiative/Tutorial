@@ -1,30 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE ModelComposition PUBLIC " " "https://raw.githubusercontent.com/AgriculturalModelExchangeInitiative/crop2ml/master/ModelComposition.dtd">
-<ModelComposition name="Snow" id="STICS.snow_pkg.Snow" version="1.0" timestep ="1">
+<ModelComposition name="Snow" id="STICS.Snow" version="1.0" timestep ="1">
 	<Description>
 		<Title>Snow model</Title>
-		<Authors>STICS</Authors>
-		<Institution>STICS</Institution>
-		<Reference>Snow paper</Reference>
-		<Abstract>Snow</Abstract>
+		<Authors>Guillaume Jégo,
+            Martin Chantigny,
+            Elizabeth Pattey,
+            Gilles Bélanger,
+            Philippe Rochette,
+            Anne Vanasse,
+            Claudia Goyer
+		</Authors>
+		<Institution>Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				CanadaLaval University,
+				Agriculture and Agri-Food Canada
+		</Institution>
+		<Reference>doi:http://dx.doi.org/10.1016/j.agrformet.2014.05.002</Reference>
+		<ExtendedDescription>It simulates the depth of snow cover and recalculate weather data</ExtendedDescription>
+		<ShortDescription>It simulates the depth of snow cover and recalculate weather data</ShortDescription>
 	</Description>
 
 	<Initialization name="init.snow" language="CyML" filename="algo/pyx/init.snow.pyx"/>
 
 	<Composition>
-		<Model name="Melting" id="snow_pkg.Melting" filename="unit.Melting.xml" />
-		<Model name="Refreezing" id="snow_pkg.Refreezing" filename="unit.Refreezing.xml" />
-		<Model name="SnowAccumulation" id="snow_pkg.SnowAccumulation" filename="unit.SnowAccumulation.xml" />
-		<Model name="SnowDensity" id="snow_pkg.SnowDensity" filename="unit.SnowDensity.xml" />
-		<Model name="SnowDepth" id="snow_pkg.SnowDepth" filename="unit.SnowDepth.xml" />
-		<Model name="SnowDepthTrans" id="snow_pkg.SnowDepthTrans" filename="unit.SnowDepthTrans.xml" />
-		<Model name="SnowDry" id="snow_pkg.SnowDry" filename="unit.SnowDry.xml" />
-		<Model name="SnowMelt" id="snow_pkg.SnowMelt" filename="unit.SnowMelt.xml" />
-		<Model name="SnowWet" id="snow_pkg.SnowWet" filename="unit.SnowWet.xml" />
-		<Model name="Tavg" id="snow_pkg.Tavg" filename="unit.Tavg.xml" />
-		<Model name="TempMax" id="snow_pkg.TempMax" filename="unit.TempMax.xml" />
-		<Model name="TempMin" id="snow_pkg.TempMin" filename="unit.TempMin.xml" />
-		<Model name="Preciprec" id="snow_pkg.Preciprec" filename="unit.Preciprec.xml" />
+		<Model name="Melting" id="STICS.Snow.Melting" filename="unit.Melting.xml" />
+		<Model name="Refreezing" id="STICS.Snow.Refreezing" filename="unit.Refreezing.xml" />
+		<Model name="SnowAccumulation" id="STICS.Snow.SnowAccumulation" filename="unit.SnowAccumulation.xml" />
+		<Model name="SnowDensity" id="STICS.Snow.SnowDensity" filename="unit.SnowDensity.xml" />
+		<Model name="SnowDepth" id="STICS.Snow.SnowDepth" filename="unit.SnowDepth.xml" />
+		<Model name="SnowDepthTrans" id="STICS.Snow.SnowDepthTrans" filename="unit.SnowDepthTrans.xml" />
+		<Model name="SnowDry" id="STICS.Snow.SnowDry" filename="unit.SnowDry.xml" />
+		<Model name="SnowMelt" id="STICS.Snow.SnowMelt" filename="unit.SnowMelt.xml" />
+		<Model name="SnowWet" id="STICS.Snow.SnowWet" filename="unit.SnowWet.xml" />
+		<Model name="Tavg" id="STICS.Snow.Tavg" filename="unit.Tavg.xml" />
+		<Model name="TempMax" id="STICS.Snow.TempMax" filename="unit.TempMax.xml" />
+		<Model name="TempMin" id="STICS.Snow.TempMin" filename="unit.TempMin.xml" />
+		<Model name="Preciprec" id="STICS.Snow.Preciprec" filename="unit.Preciprec.xml" />
 
 		<Links>
 			<InputLink target="Melting.jul" source="jul" />
@@ -75,6 +90,7 @@
 			<InternalLink target="TempMin.Sdepth_cm" source="SnowDepthTrans.Sdepth_cm" />
 			<InternalLink target="TempMax.Sdepth_cm" source="SnowDepthTrans.Sdepth_cm" />
 			<InternalLink target="SnowDry.M" source="Melting.M" />
+			<InternalLink target="SnowMelt.M" source="Melting.M" />
 			<InternalLink target="SnowWet.Sdry" source="SnowDry.Sdry" />
 			<InternalLink target="SnowDry.Snowaccu" source="SnowAccumulation.Snowaccu" />
 			<InternalLink target="Melting.tavg" source="Tavg.tavg" />

@@ -1,19 +1,19 @@
 #'Test generation'
 
-from GAImean import *
+from gaimean import *
 from math import *
 import numpy 
 
 
 
 def test_test_wheat1():
-    params= GAImean(
+    params= gaimean(
     tTWindowForPTQ = 70.0,
-    deltaTT = 0.279,
     gAI = 91.2,
-    listGAITTWindowForPTQ_t1 = [0.0],
+    deltaTT = 0.279,
     pastMaxAI_t1 = 0.279,
     listTTShootWindowForPTQ1_t1 = [0.0],
+    listGAITTWindowForPTQ_t1 = [0.0],
      )
     gAImean_estimated = round(params[0], 2)
     gAImean_computed = 45.6

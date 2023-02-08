@@ -1,23 +1,30 @@
 import numpy 
 from math import *
-def model_Conductance(float vonKarman=0.42,
-                      float heightWeatherMeasurements=2.0,
-                      float zm=0.13,
-                      float zh=0.013,
-                      float d=0.67,
-                      float plantHeight=0.0,
-                      float wind=124000.0):
+def model_conductance(float vonKarman,
+                      float heightWeatherMeasurements,
+                      float zm,
+                      float zh,
+                      float d,
+                      float plantHeight,
+                      float wind):
     """
 
     Conductance Model
-    Author: Pierre Martre
-    Reference: Modelling energy balance in the wheat crop model SiriusQuality2:
-            Evapotranspiration and canopy and soil temperature calculations
+    Author: Peter D. Jamieson, Glen S. Francis, Derick R. Wilson, Robert J. Martin
+    Reference:  https://doi.org/10.1016/0168-1923(94)02214-5
         
-    Institution: INRA/LEPSE Montpellier
-    Abstract: The boundary layer conductance is expressed as the wind speed profile above the
+    Institution: New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.
+        
+    ExtendedDescription: The boundary layer conductance is expressed as the wind speed profile above the
             canopy and the canopy structure. The approach does not take into account buoyancy
             effects. 
+        
+    ShortDescription: The boundary layer conductance is expressed as the wind speed profile above the
+            canopy and the canopy structure. The approach does not take into account buoyancy
+            effects.
         
 
     """
@@ -26,3 +33,5 @@ def model_Conductance(float vonKarman=0.42,
     h = max(10.0, plantHeight) / 100.0
     conductance = (wind * pow(vonKarman, 2)) / (log((heightWeatherMeasurements - d * h) / (zm * h)) * log((heightWeatherMeasurements - d * h) / (zh * h)))
     return  conductance
+
+

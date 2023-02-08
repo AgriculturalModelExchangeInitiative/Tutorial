@@ -1,20 +1,24 @@
 import numpy 
 from math import *
-def model_CanopyTemperature(float minTair=0.7,
-                            float maxTair=7.2,
-                            float cropHeatFlux=447.912,
-                            float conductance=598.685,
-                            float lambdaV=2.454,
-                            float rhoDensityAir=1.225,
-                            float specificHeatCapacityAir=0.00101):
+def model_canopytemperature(float minTair,
+                            float maxTair,
+                            float cropHeatFlux,
+                            float conductance,
+                            float lambdaV,
+                            float rhoDensityAir,
+                            float specificHeatCapacityAir):
     """
 
     CanopyTemperature Model
-    Author: Pierre Martre
-    Reference: Modelling energy balance in the wheat crop model SiriusQuality2:
-            Evapotranspiration and canopy and soil temperature calculations
-    Institution: INRA/LEPSE Montpellier
-    Abstract: It is calculated from the crop heat flux and the boundary layer conductance 
+    Author: Peter D. Jamieson, Glen S. Francis, Derick R. Wilson, Robert J. Martin
+    Reference: https://doi.org/10.1016/0168-1923(94)02214-5
+    Institution: New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.
+        
+    ExtendedDescription: It is calculated from the crop heat flux and the boundary layer conductance 
+    ShortDescription: It is calculated from the crop heat flux and the boundary layer conductance 
 
     """
     cdef float minCanopyTemperature
@@ -22,3 +26,5 @@ def model_CanopyTemperature(float minTair=0.7,
     minCanopyTemperature = minTair + cropHeatFlux / ((rhoDensityAir * specificHeatCapacityAir * conductance / lambdaV) * 1000.0)
     maxCanopyTemperature = maxTair + cropHeatFlux / ((rhoDensityAir * specificHeatCapacityAir * conductance / lambdaV) * 1000.0)
     return  minCanopyTemperature, maxCanopyTemperature
+
+

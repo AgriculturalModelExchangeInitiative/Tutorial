@@ -1,24 +1,24 @@
 #'Test generation'
 
-from VernalizationProgress import *
+from vernalizationprogress import *
 from math import *
 import numpy 
 
 
 
 def test_test_wheat1():
-    params= VernalizationProgress(
-    cumulTT =  112.330110409888,
-    vAI = 0.015,
-    maxDL = 15.0,
-    maxTvern = 23.0,
-    aMXLFNO = 24.0,
+    params= vernalizationprogress(
     isVernalizable = 1,
-    vBEE = 0.01,
-    minDL = 8.0,
-    pNini = 4.0,
     minTvern = 0.0,
     intTvern = 11.0,
+    vAI = 0.015,
+    vBEE = 0.01,
+    minDL = 8.0,
+    maxDL = 15.0,
+    maxTvern = 23.0,
+    pNini = 4.0,
+    aMXLFNO = 24.0,
+    cumulTT =  112.330110409888,
      )
     vernaprog_estimated = round(params[0], 2)
     vernaprog_computed = 0.64

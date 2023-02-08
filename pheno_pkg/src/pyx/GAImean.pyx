@@ -1,6 +1,6 @@
 import numpy 
 from math import *
-def model_GAImean(float gAI=0.0,
+def model_gaimean(float gAI=0.0,
                   float tTWindowForPTQ=0.0,
                   float deltaTT=0.0,
                   float pastMaxAI_t1=0.0,
@@ -9,10 +9,15 @@ def model_GAImean(float gAI=0.0,
     """
 
     Average GAI on a specific thermal time window
-    Author: Loïc Manceau
-    Reference: -
-    Institution: INRA
-    Abstract: -
+    Author: Peter D. Jamieson, Glen S. Francis, Derick R. Wilson, Robert J. Martin
+    Reference: https://doi.org/10.1016/0168-1923(94)02214-5
+    Institution: New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.
+        
+    ExtendedDescription: Calculate GAI mean
+    ShortDescription: Calculate GAI mean
 
     """
     cdef float gAImean
@@ -44,7 +49,7 @@ def model_GAImean(float gAI=0.0,
         #                          - default : 0.0
         #                          - min : 0.0
         #                          - max : 5000.0
-        #                          - unit : °C d
+        #                          - unit : Â°C d
         #                          - uri : 
         #            - name: DeltaTT
         #                          - description : Thermal time increase of the day
@@ -54,7 +59,7 @@ def model_GAImean(float gAI=0.0,
         #                          - default : 0.0
         #                          - min : 0.0
         #                          - max : 100.0
-        #                          - unit : °C d
+        #                          - unit : Â°C d
         #                          - uri : 
         #            - name: pastMaxAI
         #                          - description : Maximum Leaf Area Index reached the current day
@@ -74,7 +79,7 @@ def model_GAImean(float gAI=0.0,
         #                          - default : [0.0]
         #                          - min : 
         #                          - max : 
-        #                          - unit : °C d
+        #                          - unit : Â°C d
         #                          - uri : 
         #            - name: ListGAITTWindowForPTQ
         #                          - description : List of daily Green Area Index in the window dedicated to average
@@ -109,7 +114,7 @@ def model_GAImean(float gAI=0.0,
         #                          - datatype : DOUBLELIST
         #                          - min : 
         #                          - max : 
-        #                          - unit : °C d
+        #                          - unit : Â°C d
         #                          - uri : 
         #            - name: ListGAITTWindowForPTQ
         #                          - description : List of daily Green Area Index in the window dedicated to average

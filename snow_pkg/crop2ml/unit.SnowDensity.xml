@@ -3,10 +3,25 @@
 <ModelUnit modelid="STICS.Snow.SnowDensity" name="SnowDensity" timestep="1" version="1.0">
 	<Description>
 		<Title>Density of snow cover calculation</Title>
-		<Authors>STICS</Authors>
-		<Institution>INRA</Institution>
-		<Reference>-</Reference>
-		<Abstract>-</Abstract>
+		<Authors>Guillaume Jégo,
+            Martin Chantigny,
+            Elizabeth Pattey,
+            Gilles Bélanger,
+            Philippe Rochette,
+            Anne Vanasse,
+            Claudia Goyer
+		</Authors>
+		<Institution>Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				CanadaLaval University,
+				Agriculture and Agri-Food Canada
+		</Institution>
+		<Reference>doi:http://dx.doi.org/10.1016/j.agrformet.2014.05.002</Reference>
+		<ExtendedDescription>It calculates the density of snow cover</ExtendedDescription>
+		<ShortDescription>It calculates the density of snow cover</ShortDescription>
 	</Description>
 	<Inputs>
 		<Input name="ps_t1" description="density of snow cover in previous day" inputtype="variable" variablecategory="state" datatype="DOUBLE" default="0.0" min="0.0" max="100.0" unit="kg/m**3" uri=""/>

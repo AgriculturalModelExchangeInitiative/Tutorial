@@ -1,14 +1,14 @@
 import numpy 
 from math import *
-def model_UpdatePhase(float cumulTT=354.582294512,
-                      float leafNumber_t1=4.62051162186,
+def model_updatephase(float cumulTT=354.582294511779,
+                      float leafNumber_t1=4.620511621863958,
                       float cumulTTFromZC_39=0.0,
                       int isMomentRegistredZC_39=0,
-                      float gAI=0.325519628514,
+                      float gAI=0.3255196285135,
                       float grainCumulTT=0.0,
-                      float dayLength=12.7433275303,
-                      float vernaprog=1.05325268296,
-                      float minFinalNumber=6.87941041399,
+                      float dayLength=12.7433275303389,
+                      float vernaprog=1.0532526829571554,
+                      float minFinalNumber=6.879410413987549,
                       float fixPhyll=91.2,
                       int isVernalizable=1,
                       float dse=105.0,
@@ -30,13 +30,16 @@ def model_UpdatePhase(float cumulTT=354.582294512,
     """
 
     UpdatePhase Model
-    Author: Pierre MARTRE
-    Reference: Modeling development phase in the 
-                Wheat Simulation Model SiriusQuality.
-                See documentation at http://www1.clermont.inra.fr/siriusquality/?page_id=427
-    Institution: INRA Montpellier
-    Abstract: This strategy advances the phase and calculate the final leaf number
+    Author: Peter D. Jamieson, Glen S. Francis, Derick R. Wilson, Robert J. Martin
+    Reference: https://doi.org/10.1016/0168-1923(94)02214-5
+    Institution: New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.
+        
+    ExtendedDescription: This strategy advances the phase and calculates the final leaf number
     	
+    ShortDescription: This strategy advances the phase and calculates the final leaf number
 
     """
     cdef float finalLeafNumber

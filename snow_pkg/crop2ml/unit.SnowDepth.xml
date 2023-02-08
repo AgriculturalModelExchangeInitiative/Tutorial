@@ -2,11 +2,26 @@
 <!DOCTYPE ModelUnit PUBLIC " " "https://raw.githubusercontent.com/AgriculturalModelExchangeInitiative/crop2ml/master/ModelUnit.dtd">
 <ModelUnit modelid="STICS.Snow.SnowDepth" name="SnowDepth" timestep="1" version="1.0">
 	<Description>
-		<Title>snow cover depth Calculation</Title>
-		<Authors>STICS</Authors>
-		<Institution>INRA</Institution>
-		<Reference>-</Reference>
-		<Abstract>-</Abstract>
+		<Title>Snow cover depth Calculation</Title>
+		<Authors>Guillaume Jégo,
+            Martin Chantigny,
+            Elizabeth Pattey,
+            Gilles Bélanger,
+            Philippe Rochette,
+            Anne Vanasse,
+            Claudia Goyer
+		</Authors>
+		<Institution>Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				CanadaLaval University,
+				Agriculture and Agri-Food Canada
+		</Institution>
+		<Reference>doi:http://dx.doi.org/10.1016/j.agrformet.2014.05.002</Reference>
+		<ExtendedDescription>It calculates the snow cover depth Calculation</ExtendedDescription>
+		<ShortDescription>It calculates the snow cover depth Calculation</ShortDescription>
 	</Description>
 	<Inputs>
 		<Input name="Snowmelt" description="snow melt " inputtype="variable" variablecategory="state" datatype="DOUBLE" default="0.0" min="0.0" max="100.0" unit="m" uri=""/>

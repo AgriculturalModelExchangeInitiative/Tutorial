@@ -1,13 +1,13 @@
 #'Test generation'
 
-from PriestlyTaylor import *
+from priestlytaylor import *
 from math import *
 import numpy 
 
 
 
 def test_test1():
-    params= PriestlyTaylor(
+    params= priestlytaylor(
     Alpha = 1.5,
     netRadiationEquivalentEvaporation = 638.142,
      )

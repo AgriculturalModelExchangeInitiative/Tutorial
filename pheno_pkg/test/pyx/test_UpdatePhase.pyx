@@ -1,25 +1,25 @@
 #'Test generation'
 
-from UpdatePhase import *
+from updatephase import *
 from math import *
 import numpy 
 
 
 
 def test_test_wheat1():
-    params= UpdatePhase(
-    pHEADANTH = 1.0,
-    maxDL = 15.0,
-    ignoreGrainMaturation = TRUE,
-    dcd = 100.0,
-    isVernalizable = 1,
-    p = 120,
+    params= updatephase(
     choosePhyllUse = "Default",
-    sLDL = 0.85,
-    hasLastPrimordiumAppeared_t1 = 0,
+    isVernalizable = 1,
     dse = 105.0,
-    phase_t1 = 1,
+    dcd = 100.0,
     degfm = 0.0,
+    maxDL = 15.0,
+    sLDL = 0.85,
+    ignoreGrainMaturation = TRUE,
+    pHEADANTH = 1.0,
+    p = 120,
+    phase_t1 = 1,
+    hasLastPrimordiumAppeared_t1 = 0,
      )
     finalLeafNumber_estimated = round(params[0], 2)
     finalLeafNumber_computed = 8.80

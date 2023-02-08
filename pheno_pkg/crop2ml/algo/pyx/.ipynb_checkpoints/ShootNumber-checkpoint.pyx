@@ -7,7 +7,7 @@ canopyShootNumber = min(shoots * sowingDensity, targetFertileShoot)
 averageShootNumberPerPlant = canopyShootNumber / sowingDensity
 if (canopyShootNumber != canopyShootNumber_t1):
     tilleringProfile = integr(tilleringProfile_t1,canopyShootNumber - canopyShootNumber_t1)
-tillerNumber = len(tilleringProfile)
+numberTillerCohort = len(tilleringProfile)
 for i in range(len(leafTillerNumberArray_t1),ceil(leafNumber),1):
-    lNumberArray_rate.append(tillerNumber)
+    lNumberArray_rate.append(numberTillerCohort)
 leafTillerNumberArray = integr(leafTillerNumberArray_t1, lNumberArray_rate)

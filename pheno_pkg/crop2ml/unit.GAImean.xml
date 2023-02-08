@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE ModelUnit PUBLIC " " "https://raw.githubusercontent.com/AgriculturalModelExchangeInitiative/crop2ml/master/ModelUnit.dtd">
-<ModelUnit modelid="-.pheno_pkg.GAImean" name="GAImean" timestep="1" version="1.0">
+<ModelUnit modelid="SQ.WheatPhenology.GAImean" name="GAImean" timestep="1" version="1.0">
 	<Description>
 		<Title>Average GAI on a specific thermal time window</Title>
-		<Authors>Loïc Manceau</Authors>
-		<Institution>INRA</Institution>
-		<Reference>-</Reference>
-		<Abstract>-</Abstract>
+		<Authors>Peter D. Jamieson, Glen S. Francis, Derick R. Wilson, Robert J. Martin</Authors>
+        <Institution>New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.
+        </Institution>
+		<Reference>https://doi.org/10.1016/0168-1923(94)02214-5</Reference>
+		<ExtendedDescription>Calculate GAI mean</ExtendedDescription>
+		<ShortDescription>Calculate GAI mean</ShortDescription>
 	</Description>
 	<Inputs>
 		<Input name="gAI" description="Green Area Index of the day" inputtype="variable" variablecategory="auxiliary" datatype="DOUBLE" default="0.0" min="0.0" max="500.0" unit="m2 leaf m-2 ground" uri=""/>

@@ -1,17 +1,22 @@
 import numpy 
 from math import *
-def model_CumulTTFrom(list calendarMoments_t1=['Sowing'],
+def model_cumulttfrom(list calendarMoments_t1=['Sowing'],
                       list calendarCumuls_t1=[0.0],
                       float cumulTT=8.0):
     """
 
     CumulTTFrom Model
-    Author: Pierre Martre
+    Author: Peter D. Jamieson, Glen S. Francis, Derick R. Wilson, Robert J. Martin
     Reference: Modeling development phase in the 
                 Wheat Simulation Model SiriusQuality.
                 See documentation at http://www1.clermont.inra.fr/siriusquality/?page_id=427
-    Institution: INRA Montpellier
-    Abstract: Calculate CumulTT 
+    Institution: New Zealand Institute for Crop and Food Research Ltd.,
+                    New Zealand Institute for Crop and Food Research Ltd.,
+                    New Zealand Institute for Crop and Food Research Ltd.,
+                    New Zealand Institute for Crop and Food Research Ltd.
+        
+    ExtendedDescription: Calculate the difference of the cumul thermal time at the current time and the one at three development phases  
+    ShortDescription: Difference of the cumul thermal times
 
     """
     cdef float cumulTTFromZC_65

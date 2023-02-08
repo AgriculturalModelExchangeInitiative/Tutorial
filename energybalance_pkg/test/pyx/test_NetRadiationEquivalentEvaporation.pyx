@@ -1,13 +1,13 @@
 #'Test generation'
 
-from NetRadiationEquivalentEvaporation import *
+from netradiationequivalentevaporation import *
 from math import *
 import numpy 
 
 
 
 def test_test1():
-    params= NetRadiationEquivalentEvaporation(
+    params= netradiationequivalentevaporation(
     netRadiation = 1.566,
      )
     netRadiationEquivalentEvaporation_estimated = round(params, 3)

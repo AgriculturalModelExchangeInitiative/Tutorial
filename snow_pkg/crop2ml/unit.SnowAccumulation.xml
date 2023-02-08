@@ -2,17 +2,32 @@
 <!DOCTYPE ModelUnit PUBLIC " " "https://raw.githubusercontent.com/AgriculturalModelExchangeInitiative/crop2ml/master/ModelUnit.dtd">
 <ModelUnit modelid="STICS.Snow.SnowAccumulation" name="SnowAccumulation" timestep="1" version="1.0">
 	<Description>
-		<Title>snowfall accumulation  calculation</Title>
-		<Authors>STICS</Authors>
-		<Institution>INRA</Institution>
-		<Reference>-</Reference>
-		<Abstract>-</Abstract>
+		<Title>Snowfall accumulation  calculation</Title>
+		<Authors>Guillaume Jégo,
+            Martin Chantigny,
+            Elizabeth Pattey,
+            Gilles Bélanger,
+            Philippe Rochette,
+            Anne Vanasse,
+            Claudia Goyer
+		</Authors>
+		<Institution>Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				CanadaLaval University,
+				Agriculture and Agri-Food Canada
+		</Institution>
+		<Reference>doi:http://dx.doi.org/10.1016/j.agrformet.2014.05.002</Reference>
+		<ExtendedDescription>It simulates the snowfall accumulation</ExtendedDescription>
+		<ShortDescription>It simulates the snowfall accumulation</ShortDescription>
 	</Description>
 	<Inputs>
 		<Input name="tsmax" description="maximum daily air temperature (tmax) below which all precipitation is assumed to be snow" inputtype="parameter" parametercategory="constant" datatype="DOUBLE" default="0.0" min="0.0" max="1000" unit="degC" uri=""/>
 		<Input name="tmax" description="current maximum air temperature" inputtype="variable" variablecategory="auxiliary" datatype="DOUBLE" default="0.0" min="0.0" max="5000.0" unit="degC" uri=""/>
 		<Input name="trmax" description="tmax above which all precipitation is assumed to be rain" inputtype="parameter" parametercategory="constant" datatype="DOUBLE" default="0.0" min="0.0" max="5000.0" unit="degC" uri=""/>
-		<Input name="precip" description="recalculated precipitation" inputtype="variable" variablecategory="auxiliary" datatype="DOUBLE" default="0.0" min="0.0" max="5000.0" unit="mmW" uri=""/>
+		<Input name="precip" description="current precipitation" inputtype="variable" variablecategory="auxiliary" datatype="DOUBLE" default="0.0" min="0.0" max="5000.0" unit="mmW" uri=""/>
 
 	</Inputs>
 	<Outputs>

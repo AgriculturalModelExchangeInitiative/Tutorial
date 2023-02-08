@@ -1,18 +1,25 @@
 import numpy 
 from math import *
-def model_PotentialTranspiration(float evapoTranspiration=830.958,
-                                 float tau=0.9983):
+def model_potentialtranspiration(float evapoTranspiration,
+                                 float tau):
     """
 
     PotentialTranspiration Model
-    Author: Pierre Martre
-    Reference: Modelling energy balance in the wheat crop model SiriusQuality2:
-            Evapotranspiration and canopy and soil temperature calculations
-    Institution: INRA/LEPSE Montpellier
-    Abstract: SiriusQuality2 uses availability of water from the soil reservoir as a method to restrict
+    Author: Peter D. Jamieson, Glen S. Francis, Derick R. Wilson, Robert J. Martin
+    Reference:  https://doi.org/10.1016/0168-1923(94)02214-5
+    Institution: New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.
+        
+    ExtendedDescription: SiriusQuality2 uses availability of water from the soil reservoir as a method to restrict
                     transpiration as soil moisture is depleted 
+    ShortDescription: It uses the availability of water from the soil reservoir as a method to restrict
+            transpiration as soil moisture is depleted
 
     """
     cdef float potentialTranspiration
     potentialTranspiration= evapoTranspiration * (1.0 - tau)
     return  potentialTranspiration
+
+

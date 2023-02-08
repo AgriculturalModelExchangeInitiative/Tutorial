@@ -1,6 +1,6 @@
 import numpy 
 from math import *
-def model_PhylSowingDateCorrection(int sowingDay=1,
+def model_phylsowingdatecorrection(int sowingDay=1,
                                    float latitude=0.0,
                                    float sDsa_sh=1.0,
                                    float rp=0.0,
@@ -10,12 +10,15 @@ def model_PhylSowingDateCorrection(int sowingDay=1,
     """
 
     PhylSowingDateCorrection Model
-    Author: Loic Manceau
-    Reference: Modeling development phase in the 
-                Wheat Simulation Model SiriusQuality.
-                See documentation at http://www1.clermont.inra.fr/siriusquality/?page_id=427
-    Institution: INRA Montpellier
-    Abstract: Correction of the Phyllochron Varietal parameter according to sowing date 
+    Author: Peter D. Jamieson, Glen S. Francis, Derick R. Wilson, Robert J. Martin
+    Reference: https://doi.org/10.1016/0168-1923(94)02214-5
+    Institution: New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.,
+            New Zealand Institute for Crop and Food Research Ltd.
+        
+    ExtendedDescription: Correction of the Phyllochron Varietal parameter according to sowing date 
+    ShortDescription: Correction of the Phyllochron Varietal parameter according to sowing date 
 
     """
     cdef float fixPhyll

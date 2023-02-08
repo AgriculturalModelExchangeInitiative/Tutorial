@@ -1,19 +1,19 @@
 #'Test generation'
 
-from ShootNumber import *
+from shootnumber import *
 from math import *
 import numpy 
 
 
 
 def test_test_wheat1():
-    params= ShootNumber(
-    sowingDensity = 288.0,
+    params= shootnumber(
     targetFertileShoot = 600.0,
-    leafTillerNumberArray_t1 = [1, 1, 1],
-    leafNumber = 3.34348137255,
-    tilleringProfile_t1 = [288.0],
+    sowingDensity = 288.0,
     canopyShootNumber_t1 = 288.0,
+    leafNumber = 3.34348137255,
+    leafTillerNumberArray_t1 = [1, 1, 1],
+    tilleringProfile_t1 = [288.0],
      )
     averageShootNumberPerPlant_estimated = round(params[0], 2)
     averageShootNumberPerPlant_computed = 2

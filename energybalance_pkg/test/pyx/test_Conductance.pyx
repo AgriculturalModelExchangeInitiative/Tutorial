@@ -1,16 +1,16 @@
 #'Test generation'
 
-from Conductance import *
+from conductance import *
 from math import *
 import numpy 
 
 
 
 def test_test1():
-    params= Conductance(
-    zm = 0.13,
-    zh = 0.013,
+    params= conductance(
     d = 0.67,
+    zh = 0.013,
+    zm = 0.13,
     wind = 124000,
     plantHeight = 0,
      )

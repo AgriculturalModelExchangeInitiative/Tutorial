@@ -2,11 +2,26 @@
 <!DOCTYPE ModelUnit PUBLIC " " "https://raw.githubusercontent.com/AgriculturalModelExchangeInitiative/crop2ml/master/ModelUnit.dtd">
 <ModelUnit modelid="STICS.Snow.Melting" name="Melting" timestep="1" version="1.0">
 	<Description>
-		<Title>snow in the process of melting</Title>
-		<Authors>STICS</Authors>
-		<Institution>INRA</Institution>
-		<Reference>-</Reference>
-		<Abstract>-</Abstract>
+		<Title>Snow melting Model</Title>
+		<Authors>Guillaume Jégo,
+            Martin Chantigny,
+            Elizabeth Pattey,
+            Gilles Bélanger,
+            Philippe Rochette,
+            Anne Vanasse,
+            Claudia Goyer
+		</Authors>
+		<Institution>Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				Agriculture and Agri-Food Canada,
+				CanadaLaval University,
+				Agriculture and Agri-Food Canada
+		</Institution>
+		<Reference>doi:http://dx.doi.org/10.1016/j.agrformet.2014.05.002</Reference>
+		<ExtendedDescription>It simulates the snow in the process of melting</ExtendedDescription>
+		<ShortDescription>It simulates the snow in the process of melting</ShortDescription>
 	</Description>
 	<Inputs>
 		<Input name="jul" description="current day of year for the calculation" inputtype="variable" variablecategory="auxiliary" datatype="INT" default="0" min="0" max="366" unit="d" uri=""/>

@@ -1,15 +1,15 @@
 #'Test generation'
 
-from NetRadiation import *
+from netradiation import *
 from math import *
 import numpy 
 
 
 
 def test_test1():
-    params= NetRadiation(
-    solarRadiation = 3,
+    params= netradiation(
     elevation = 0,
+    solarRadiation = 3,
     vaporPressure = 6.1,
      )
     netRadiation_estimated = round(params[0], 3)

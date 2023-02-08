@@ -1,15 +1,15 @@
 #'Test generation'
 
-from LeafNumber import *
+from leafnumber import *
 from math import *
 import numpy 
 
 
 
 def test_test_wheat1():
-    params= LeafNumber(
-    phase = 3,
+    params= leafnumber(
     leafNumber_t1 = 5.147163833893262,
+    phase = 3,
     phyllochron_t1 = 91.2,
      )
     leafNumber_estimated = round(params, 2)
